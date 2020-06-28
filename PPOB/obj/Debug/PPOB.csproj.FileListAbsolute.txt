@@ -1,0 +1,14 @@
+C:\ProjectDev\PPOB\PPOB\bin\Debug\PPOB.exe
+C:\ProjectDev\PPOB\PPOB\bin\Debug\PPOB.pdb
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.Form1.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.Properties.Resources.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.csproj.GenerateResource.cache
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.exe
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.pdb
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmPLN.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmPulsa.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmMainMenu.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmPLNMenu.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmPulsaMenu.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.csprojAssemblyReference.cache
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmReport.resources
