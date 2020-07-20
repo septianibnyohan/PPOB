@@ -39,7 +39,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnPLN = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLaporan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button10
@@ -204,21 +204,22 @@
             this.btnPLN.UseVisualStyleBackColor = true;
             this.btnPLN.Click += new System.EventHandler(this.btnPLN_Click);
             // 
-            // button1
+            // btnLaporan
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(285, 35);
-            this.button1.TabIndex = 34;
-            this.button1.Text = " Laporan";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLaporan.FlatAppearance.BorderSize = 0;
+            this.btnLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaporan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaporan.ForeColor = System.Drawing.Color.White;
+            this.btnLaporan.Image = ((System.Drawing.Image)(resources.GetObject("btnLaporan.Image")));
+            this.btnLaporan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLaporan.Location = new System.Drawing.Point(3, 377);
+            this.btnLaporan.Name = "btnLaporan";
+            this.btnLaporan.Size = new System.Drawing.Size(285, 35);
+            this.btnLaporan.TabIndex = 34;
+            this.btnLaporan.Text = " Laporan";
+            this.btnLaporan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLaporan.UseVisualStyleBackColor = true;
+            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
             // 
             // frmMainMenu
             // 
@@ -226,7 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(291, 472);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLaporan);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button7);
@@ -257,6 +258,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnPLN;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLaporan;
     }
 }

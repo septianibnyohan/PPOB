@@ -11,10 +11,10 @@ namespace PPOB
 {
     public partial class frmMainMenu : Form
     {
-        private Form1 mainForm = null;
+        private MainForm mainForm = null;
         public frmMainMenu(Form callingForm)
         {
-            mainForm = callingForm as Form1;
+            mainForm = callingForm as MainForm;
             InitializeComponent();
         }
 
@@ -34,6 +34,17 @@ namespace PPOB
             frmPulsaMenu frm = new frmPulsaMenu(mainForm);
             frm.TopLevel = false;
             this.mainForm.pnlMenu.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
+        }
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            frmReport frm = new frmReport();
+            frm.TopLevel = false;
+
+            mainForm.pnlForm.Controls.Clear();
+            mainForm.pnlForm.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
         }

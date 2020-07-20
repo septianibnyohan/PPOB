@@ -11,10 +11,10 @@ namespace PPOB
 {
     public partial class frmPLNMenu : Form
     {
-        private Form1 mainForm = null;
+        private MainForm mainForm = null;
         public frmPLNMenu(Form callingForm)
         {
-            mainForm = callingForm as Form1;
+            mainForm = callingForm as MainForm;
             InitializeComponent();
         }
 

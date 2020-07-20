@@ -11,10 +11,10 @@ namespace PPOB
 {
     public partial class frmPulsaMenu : Form
     {
-        private Form1 mainForm = null;
+        private MainForm mainForm = null;
         public frmPulsaMenu(Form callingForm)
         {
-            mainForm = callingForm as Form1;
+            mainForm = callingForm as MainForm;
             InitializeComponent();
         }
 
@@ -47,6 +47,7 @@ namespace PPOB
             mainForm.pnlForm.Controls.Clear();
             mainForm.pnlForm.Controls.Add(frm);
             frm.BringToFront();
+            frm.pnlKeterangan.Visible = false;
             frm.Show();
         }
 
@@ -57,6 +58,7 @@ namespace PPOB
             mainForm.pnlForm.Controls.Clear();
             mainForm.pnlForm.Controls.Add(frm);
             frm.BringToFront();
+            frm.pnlKeterangan.Visible = true;
             frm.Show();
         }
 
