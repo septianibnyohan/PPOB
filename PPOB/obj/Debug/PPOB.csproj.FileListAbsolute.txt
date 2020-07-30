@@ -31,3 +31,8 @@ C:\ProjectDev\TelegramBlaster\PPOB\PPOB\obj\Debug\PPOB.csproj.GenerateResource.c
 C:\ProjectDev\TelegramBlaster\PPOB\PPOB\obj\Debug\PPOB.csproj.CopyComplete
 C:\ProjectDev\TelegramBlaster\PPOB\PPOB\obj\Debug\PPOB.exe
 C:\ProjectDev\TelegramBlaster\PPOB\PPOB\obj\Debug\PPOB.pdb
+C:\ProjectDev\TelegramBlaster\PPOB\PPOB\bin\Debug\PPOB.exe.config
+C:\ProjectDev\TelegramBlaster\PPOB\PPOB\bin\Debug\RestSharp.dll
+C:\ProjectDev\TelegramBlaster\PPOB\PPOB\bin\Debug\RestSharp.xml
+C:\ProjectDev\TelegramBlaster\PPOB\PPOB\bin\Debug\Newtonsoft.Json.dll
+C:\ProjectDev\TelegramBlaster\PPOB\PPOB\bin\Debug\Newtonsoft.Json.xml

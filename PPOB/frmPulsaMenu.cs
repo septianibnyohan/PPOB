@@ -44,6 +44,7 @@ namespace PPOB
             frmPulsa frm = new frmPulsa();
             frm.TopLevel = false;
             frm.pnlNominal.Visible = false;
+            frm.lblNominal.Visible = false;
             mainForm.pnlForm.Controls.Clear();
             mainForm.pnlForm.Controls.Add(frm);
             frm.BringToFront();

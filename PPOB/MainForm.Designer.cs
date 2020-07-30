@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSaldo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblSaldo);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pnlMenu);
             this.panel2.Controls.Add(this.lblName);
@@ -64,15 +64,15 @@
             this.panel2.Size = new System.Drawing.Size(291, 661);
             this.panel2.TabIndex = 1;
             // 
-            // label2
+            // lblSaldo
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 629);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 23);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "6.863";
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.ForeColor = System.Drawing.Color.White;
+            this.lblSaldo.Location = new System.Drawing.Point(40, 629);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(39, 17);
+            this.lblSaldo.TabIndex = 4;
+            this.lblSaldo.Text = "6.863";
             // 
             // label1
             // 
@@ -80,7 +80,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(4, 629);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 23);
+            this.label1.Size = new System.Drawing.Size(24, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Rp";
             // 
@@ -121,9 +121,9 @@
             this.pnlForm.Size = new System.Drawing.Size(894, 661);
             this.pnlForm.TabIndex = 4;
             // 
-            // Form1
+            // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1185, 701);
             this.ControlBox = false;
@@ -133,7 +133,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
@@ -148,11 +148,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblName;
         public System.Windows.Forms.Panel pnlMenu;
         public System.Windows.Forms.Panel pnlForm;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblSaldo;
+        public System.Windows.Forms.Label lblName;
     }
 }
 

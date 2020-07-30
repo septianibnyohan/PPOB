@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PPOB.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace PPOB
         {
             mainForm = callingForm as MainForm;
             InitializeComponent();
+
+            OperatorRepo.Load();
         }
 
         private void btnPLN_Click(object sender, EventArgs e)

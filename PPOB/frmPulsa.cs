@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PPOB.Helper;
+using PPOB.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +13,11 @@ namespace PPOB
 {
     public partial class frmPulsa : Form
     {
+        private bool listrigger = false;
         public frmPulsa()
         {
             InitializeComponent();
+            //pictureBox3.Image = Properties.Resources.smartfren_3;
         }
 
         private void frmPulsa_Load(object sender, EventArgs e)
@@ -24,6 +28,36 @@ namespace PPOB
             { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
 
             initialColorButton();
+        }
+
+        private void AddButton()
+        {
+            
+            
+            var products = ApiHelper.GetListProduct();
+
+            foreach (var product in products)
+            {
+                Button b = new Button();
+                b.FlatStyle = FlatStyle.Flat;
+                b.BackColor = Color.FromArgb(249, 249, 249);
+                b.FlatAppearance.BorderColor = Color.FromArgb(212, 212, 212);
+                b.FlatAppearance.MouseOverBackColor = b.BackColor;
+                b.BackColorChanged += (s, e) => {
+                     b.FlatAppearance.MouseOverBackColor = b.BackColor;
+                 };
+
+                var product_price = string.Format("{0:#,##0.00}", product.Price).Split(',');
+                b.Text = product.Description + " - Rp " + product_price[0];
+                Font f = new Font("Segoe UI", 9, FontStyle.Regular);
+                b.Font = f;
+                b.Width = 165;
+                b.Height = 63;
+
+                b.Click += btnNominal_Click;
+
+                pnlNominal.Controls.Add(b);
+            }
         }
 
         private void initialColorButton()
@@ -78,9 +112,55 @@ namespace PPOB
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = greenCustom;
 
-            var btn_text = button.Text.Replace("\r\n","\n").Split('\n');
+            var btn_text = button.Text.Replace("\r\n","\n").Split('-');
 
-            lblHarga.Text = btn_text[1];
+            lblHarga.Text = btn_text[btn_text.Count() - 1];
+        }
+
+        private void txbPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            //var phone = txbPhone.Text;
+
+
+            //if (phone.Length >= 4)
+            //{
+            //    var prefix_phone = phone.Substring(0, 4);
+            //    picOperatorLogo.Image = OperatorRepo.Data[prefix_phone];
+            //}
+
+            
+        }
+
+        private void txbPhone_KeyUp(object sender, KeyEventArgs e)
+        {
+            var phone = txbPhone.Text;
+
+
+            if (phone.Length >= 4)
+            {
+                var prefix_phone = phone.Substring(0, 4);
+
+                if (OperatorRepo.Data.ContainsKey(prefix_phone))
+                {
+                    picOperatorLogo.Image = OperatorRepo.Data[prefix_phone];
+
+                    if (!listrigger)
+                    {
+                        AddButton();
+                        listrigger = true;
+                    }                    
+                }
+            }
+            else
+            {
+                picOperatorLogo.Image = null;
+
+                while (pnlNominal.Controls.Count > 0)
+                {
+                    pnlNominal.Controls.RemoveAt(0);
+                }
+                listrigger = false;
+            }
         }
     }
 }
