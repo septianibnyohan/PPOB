@@ -64,9 +64,13 @@
   <ItemGroup>
     <Compile Include="Class\Model\Agent.cs" />
     <Compile Include="Class\Model\Product.cs" />
+    <Compile Include="Class\Model\ProductInfo.cs" />
+    <Compile Include="Class\Model\Topup.cs" />
     <Compile Include="Class\Response\Basic.cs" />
     <Compile Include="Class\Response\LoginResponse.cs" />
+    <Compile Include="Class\Response\ProductInfoResponse.cs" />
     <Compile Include="Class\Response\ProductListResponse.cs" />
+    <Compile Include="Class\Response\TopupResponse.cs" />
     <Compile Include="Class\Session.cs" />
     <Compile Include="Component\RoundedButton.cs">
       <SubType>Component</SubType>

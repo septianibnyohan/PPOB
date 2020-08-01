@@ -9,12 +9,76 @@ namespace PPOB.Repository
     public class OperatorRepo
     {
         public static Dictionary<string, Bitmap> Data { get; set; }
+        public static Dictionary<string, string> Code { get; set; }
 
 
         public static void Load()
         {
             Data = GetBitmap();
+            Code = GetCode();
         }
+
+        private static Dictionary<string, string> GetCode()
+        {
+            //Loading Bitmap
+            var code = new Dictionary<string, string>()
+            {
+                // Telkomsel
+                { "0811", "TELKOMSEL"},
+                { "0812", "TELKOMSEL"},
+                { "0813", "TELKOMSEL"},
+                { "0821", "TELKOMSEL"},
+                { "0822", "TELKOMSEL"},
+                { "0852", "TELKOMSEL"},
+                { "0853", "TELKOMSEL"},
+                { "0823", "TELKOMSEL"},
+                { "0851", "TELKOMSEL"},
+
+                // INDOSAT
+                { "0814", "ISAT"},
+                { "0815", "ISAT"},
+                { "0816", "ISAT"},
+                { "0855", "ISAT"},
+                { "0856", "ISAT"},
+                { "0857", "ISAT"},
+                { "0858", "ISAT"},
+
+                // XL
+                { "0817", "AXIS / XL"},
+                { "0818", "AXIS / XL"},
+                { "0819", "AXIS / XL"},
+                { "0859", "AXIS / XL"},
+                { "0877", "AXIS / XL"},
+                { "0878", "AXIS / XL"},
+
+                // AXIS
+                { "0838", "AXIS / XL"},
+                { "0831", "AXIS / XL"},
+                { "0832", "AXIS / XL"},
+                { "0833", "AXIS / XL"},
+
+                // THREE
+                { "0895", "KARTU3"},
+                { "0896", "KARTU3"},
+                { "0897", "KARTU3"},
+                { "0898", "KARTU3"},
+                { "0899", "KARTU3"},
+
+                // SMARTFREN
+                { "0881", "SMART"},
+                { "0882", "SMART"},
+                { "0883", "SMART"},
+                { "0884", "SMART"},
+                { "0885", "SMART"},
+                { "0886", "SMART"},
+                { "0887", "SMART"},
+                { "0888", "SMART"},
+                { "0889", "SMART"}
+            };
+
+            return code;
+        }
+
 
         private static Dictionary<string, Bitmap> GetBitmap()
         {

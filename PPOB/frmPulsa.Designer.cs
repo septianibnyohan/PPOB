@@ -38,11 +38,11 @@
             this.picOperatorLogo = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblHarga = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtKeterangan = new System.Windows.Forms.TextBox();
             this.pnlKeterangan = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlNominal = new System.Windows.Forms.FlowLayoutPanel();
-            this.roundedButton1 = new PPOB.Component.RoundedButton();
+            this.btnBuy = new PPOB.Component.RoundedButton();
             this.lblNominal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -143,17 +143,16 @@
             this.lblHarga.TabIndex = 18;
             this.lblHarga.Text = "Rp";
             // 
-            // textBox1
+            // txtKeterangan
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(7, 44);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(855, 51);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Masa berlaku 60 hari";
+            this.txtKeterangan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(255)))), ((int)(((byte)(235)))));
+            this.txtKeterangan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKeterangan.Location = new System.Drawing.Point(7, 44);
+            this.txtKeterangan.Multiline = true;
+            this.txtKeterangan.Name = "txtKeterangan";
+            this.txtKeterangan.ReadOnly = true;
+            this.txtKeterangan.Size = new System.Drawing.Size(855, 51);
+            this.txtKeterangan.TabIndex = 0;
             // 
             // pnlKeterangan
             // 
@@ -161,7 +160,7 @@
             this.pnlKeterangan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlKeterangan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlKeterangan.Controls.Add(this.label7);
-            this.pnlKeterangan.Controls.Add(this.textBox1);
+            this.pnlKeterangan.Controls.Add(this.txtKeterangan);
             this.pnlKeterangan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(181)))), ((int)(((byte)(73)))));
             this.pnlKeterangan.Location = new System.Drawing.Point(7, 401);
             this.pnlKeterangan.Name = "pnlKeterangan";
@@ -188,19 +187,21 @@
             this.pnlNominal.Size = new System.Drawing.Size(882, 257);
             this.pnlNominal.TabIndex = 23;
             // 
-            // roundedButton1
+            // btnBuy
             // 
-            this.roundedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(89)))), ((int)(((byte)(29)))));
-            this.roundedButton1.FlatAppearance.BorderSize = 0;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton1.ForeColor = System.Drawing.Color.White;
-            this.roundedButton1.Location = new System.Drawing.Point(643, 532);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(234, 48);
-            this.roundedButton1.TabIndex = 22;
-            this.roundedButton1.Text = "Beli";
-            this.roundedButton1.UseVisualStyleBackColor = false;
+            this.btnBuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(89)))), ((int)(((byte)(29)))));
+            this.btnBuy.FlatAppearance.BorderSize = 0;
+            this.btnBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuy.ForeColor = System.Drawing.Color.White;
+            this.btnBuy.Location = new System.Drawing.Point(643, 532);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(234, 48);
+            this.btnBuy.TabIndex = 22;
+            this.btnBuy.Text = "Beli";
+            this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Visible = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // lblNominal
             // 
@@ -221,7 +222,7 @@
             this.Controls.Add(this.lblNominal);
             this.Controls.Add(this.pnlNominal);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.roundedButton1);
+            this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.pnlKeterangan);
             this.Controls.Add(this.lblHarga);
             this.Controls.Add(this.label4);
@@ -258,8 +259,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblHarga;
         private System.Windows.Forms.Label label7;
-        private Component.RoundedButton roundedButton1;
-        public System.Windows.Forms.TextBox textBox1;
+        private Component.RoundedButton btnBuy;
+        public System.Windows.Forms.TextBox txtKeterangan;
         public System.Windows.Forms.Panel pnlKeterangan;
         public System.Windows.Forms.FlowLayoutPanel pnlNominal;
         public System.Windows.Forms.Label lblNominal;

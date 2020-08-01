@@ -14,6 +14,8 @@ namespace PPOB
     public partial class frmPulsa : Form
     {
         private bool listrigger = false;
+        private string current_product_code;
+        private string current_operator;
         public frmPulsa()
         {
             InitializeComponent();
@@ -32,9 +34,7 @@ namespace PPOB
 
         private void AddButton()
         {
-            
-            
-            var products = ApiHelper.GetListProduct();
+            var products = ApiHelper.GetListProduct(current_operator);
 
             foreach (var product in products)
             {
@@ -49,7 +49,8 @@ namespace PPOB
 
                 var product_price = string.Format("{0:#,##0.00}", product.Price).Split(',');
                 b.Text = product.Description + " - Rp " + product_price[0];
-                Font f = new Font("Segoe UI", 9, FontStyle.Regular);
+                b.Name = "btn" + product.ProductCode;
+                Font f = new Font("Open Sans", 9, FontStyle.Regular);
                 b.Font = f;
                 b.Width = 165;
                 b.Height = 63;
@@ -112,9 +113,20 @@ namespace PPOB
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = greenCustom;
 
-            var btn_text = button.Text.Replace("\r\n","\n").Split('-');
+            //var btn_text = button.Text.Replace("\r\n","\n").Split('-');
+            var btnID = button.Name;
 
-            lblHarga.Text = btn_text[btn_text.Count() - 1];
+            current_product_code = btnID.Replace("btn", "");
+
+            
+            btnBuy.Visible = true;
+
+            var product_info = ApiHelper.GetProductInfo(current_product_code);
+            txtKeterangan.Text = product_info.Product;
+            var product_price = string.Format("{0:#,##0.00}", product_info.Price).Split(',');
+            lblHarga.Text = "Rp " + product_price[0];
+            
+            //lblHarga.Text = btn_text[btn_text.Count() - 1];
         }
 
         private void txbPhone_KeyDown(object sender, KeyEventArgs e)
@@ -143,6 +155,7 @@ namespace PPOB
                 if (OperatorRepo.Data.ContainsKey(prefix_phone))
                 {
                     picOperatorLogo.Image = OperatorRepo.Data[prefix_phone];
+                    current_operator = OperatorRepo.Code[prefix_phone];
 
                     if (!listrigger)
                     {
@@ -159,8 +172,23 @@ namespace PPOB
                 {
                     pnlNominal.Controls.RemoveAt(0);
                 }
+                btnBuy.Visible = false;
                 listrigger = false;
             }
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            var product_code = current_product_code;
+            var phone_number = txbPhone.Text;
+
+            var res = ApiHelper.TopupPulsa(product_code, phone_number);
+
+            var saldo = string.Format("{0:#,##0.00}", res.SisaSaldo).Split(',');
+
+            MainForm.lblSaldo.Text = saldo[0];
+
+            MessageBox.Show(res.Keterangan + ".");
         }
     }
 }

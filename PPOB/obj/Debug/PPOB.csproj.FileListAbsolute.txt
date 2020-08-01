@@ -1,6 +1,5 @@
 C:\ProjectDev\PPOB\PPOB\bin\Debug\PPOB.exe
 C:\ProjectDev\PPOB\PPOB\bin\Debug\PPOB.pdb
-C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.Form1.resources
 C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.Properties.Resources.resources
 C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.csproj.GenerateResource.cache
 C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.exe
@@ -36,3 +35,14 @@ C:\ProjectDev\TelegramBlaster\PPOB\PPOB\bin\Debug\RestSharp.dll
 C:\ProjectDev\TelegramBlaster\PPOB\PPOB\bin\Debug\RestSharp.xml
 C:\ProjectDev\TelegramBlaster\PPOB\PPOB\bin\Debug\Newtonsoft.Json.dll
 C:\ProjectDev\TelegramBlaster\PPOB\PPOB\bin\Debug\Newtonsoft.Json.xml
+C:\ProjectDev\PPOB\PPOB\bin\Debug\PPOB.exe.config
+C:\ProjectDev\PPOB\PPOB\bin\Debug\MetroFramework.Design.dll
+C:\ProjectDev\PPOB\PPOB\bin\Debug\MetroFramework.dll
+C:\ProjectDev\PPOB\PPOB\bin\Debug\MetroFramework.Fonts.dll
+C:\ProjectDev\PPOB\PPOB\bin\Debug\Newtonsoft.Json.dll
+C:\ProjectDev\PPOB\PPOB\bin\Debug\RestSharp.dll
+C:\ProjectDev\PPOB\PPOB\bin\Debug\Newtonsoft.Json.xml
+C:\ProjectDev\PPOB\PPOB\bin\Debug\RestSharp.xml
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.MainForm.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmSecurity.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.csproj.CopyComplete

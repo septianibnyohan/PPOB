@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblSaldo = new System.Windows.Forms.Label();
+            MainForm.lblSaldo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.panel2.Controls.Add(this.lblSaldo);
+            this.panel2.Controls.Add(MainForm.lblSaldo);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pnlMenu);
             this.panel2.Controls.Add(this.lblName);
@@ -66,13 +66,13 @@
             // 
             // lblSaldo
             // 
-            this.lblSaldo.AutoSize = true;
-            this.lblSaldo.ForeColor = System.Drawing.Color.White;
-            this.lblSaldo.Location = new System.Drawing.Point(40, 629);
-            this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(39, 17);
-            this.lblSaldo.TabIndex = 4;
-            this.lblSaldo.Text = "6.863";
+            MainForm.lblSaldo.AutoSize = true;
+            MainForm.lblSaldo.ForeColor = System.Drawing.Color.White;
+            MainForm.lblSaldo.Location = new System.Drawing.Point(40, 629);
+            MainForm.lblSaldo.Name = "lblSaldo";
+            MainForm.lblSaldo.Size = new System.Drawing.Size(39, 17);
+            MainForm.lblSaldo.TabIndex = 4;
+            MainForm.lblSaldo.Text = "6.863";
             // 
             // label1
             // 
@@ -151,7 +151,7 @@
         public System.Windows.Forms.Panel pnlMenu;
         public System.Windows.Forms.Panel pnlForm;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label lblSaldo;
+        public static System.Windows.Forms.Label lblSaldo;
         public System.Windows.Forms.Label lblName;
     }
 }

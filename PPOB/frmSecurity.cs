@@ -38,12 +38,12 @@ namespace PPOB
                 this.Hide();
                 frm.Show();
                 var dec = string.Format("{0:#,##0.00}", Session.Deposite).Split(',');
-                frm.lblSaldo.Text = dec[0];
+                MainForm.lblSaldo.Text = dec[0];
                 frm.lblName.Text = Session.UserName;
             }
             else
             {
-                MessageBox.Show("Invalid username or password!", "ACCESS DENIED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Invalid username or password!", "ACCESS DENIED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
