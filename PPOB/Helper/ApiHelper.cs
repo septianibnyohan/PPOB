@@ -78,7 +78,7 @@ namespace PPOB.Helper
         }
 
 
-        public static Topup TopupPulsa(string phone_number, string product_code)
+        public static Topup TopupPulsa(string product_code, string phone_number)
         {
             var url = ApiRepo.TOPUP_PULSA;
             Login(Session.UserName, Session.Password);
