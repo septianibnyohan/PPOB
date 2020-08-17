@@ -42,7 +42,7 @@ namespace PPOB
                     b.FlatAppearance.MouseOverBackColor = b.BackColor;
                 };
 
-                var product_price = string.Format("{0:#,##0.00}", (denom + 500)).Split(',');
+                var product_price = string.Format("{0:#,##0.00}", (denom + 400)).Split(',');
                 var denom_format = string.Format("{0:#,##0.00}", denom).Split(',')[0];
                 b.Text = denom_format + " - Rp " + product_price[0];
                 b.Name = "btn" + denom;

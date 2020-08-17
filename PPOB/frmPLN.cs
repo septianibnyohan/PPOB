@@ -68,6 +68,7 @@ namespace PPOB
                 pnlNominal.Refresh();
 
                 lblHarga.Text = "Rp. " + Converter.ToRupiah(Convert.ToInt32(res.SALDO_TERPOTONG));
+                frmNominal.lblRef2.Text = res.REF2.ToString();
 
                 MessageBox.Show(res.KET.ToString());
 
@@ -93,8 +94,10 @@ namespace PPOB
                     var idpel = txtPelanggan.Text;
                     //int nominal = Converter.ToAngka(lblHarga.Text);
                     int nominal = Converter.ToAngka(frmNominal.lblRpTagPln.Text);
+                    int admin = Converter.ToAngka(frmNominal.lblAdminBank.Text);
+                    string ref2 = frmNominal.lblRef2.Text;
 
-                    var res = ApiHelper.PayDetail(frmNominal.lblIdPel.Text, nominal);
+                    var res = ApiHelper.PayDetail(frmNominal.lblIdPel.Text, nominal, ref2);
 
                     if (res.status == "success")
                     {

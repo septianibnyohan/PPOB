@@ -43,6 +43,7 @@
             this.lblRpTagPln = new System.Windows.Forms.Label();
             this.lblAdminBank = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.lblRef2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -187,12 +188,23 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "INFORMASI TAGIHAN PLN";
             // 
+            // lblRef2
+            // 
+            this.lblRef2.AutoSize = true;
+            this.lblRef2.Location = new System.Drawing.Point(457, 53);
+            this.lblRef2.Name = "lblRef2";
+            this.lblRef2.Size = new System.Drawing.Size(45, 16);
+            this.lblRef2.TabIndex = 6;
+            this.lblRef2.Text = "label8";
+            this.lblRef2.Visible = false;
+            // 
             // frmPLNPascaNominal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 255);
             this.ControlBox = false;
+            this.Controls.Add(this.lblRef2);
             this.Controls.Add(this.lblAdminBank);
             this.Controls.Add(this.lblRpTagPln);
             this.Controls.Add(this.label7);
@@ -234,5 +246,6 @@
         public System.Windows.Forms.Label lblBlTh;
         public System.Windows.Forms.Label lblRpTagPln;
         public System.Windows.Forms.Label lblAdminBank;
+        public System.Windows.Forms.Label lblRef2;
     }
 }

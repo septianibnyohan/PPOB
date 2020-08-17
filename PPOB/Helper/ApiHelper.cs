@@ -122,7 +122,7 @@ namespace PPOB.Helper
             }
         }
 
-        public static AllResponse PayDetail(string idpel, int nominal)
+        public static AllResponse PayDetail(string idpel, int nominal, string ref2)
         {
             var url = ApiRepo.PAY_DETAIL;
             Login(Session.UserName, Session.Password);
@@ -130,7 +130,8 @@ namespace PPOB.Helper
             dynamic obj_data = new
             {
                 idpel = idpel,
-                nominal = nominal
+                nominal = nominal.ToString(),
+                ref2 = ref2
             };
 
             var data = JSONHelper.ToJSON(obj_data);
