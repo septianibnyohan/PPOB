@@ -20,23 +20,23 @@ namespace PPOB
 
         private void btnToken_Click(object sender, EventArgs e)
         {
-            frmPLN frm = new frmPLN();
-            frm.TopLevel = false;
-            mainForm.pnlForm.Controls.Clear();
-            mainForm.pnlForm.Controls.Add(frm);
-            frm.BringToFront();
-            frm.Show();
+            //frmPLN frm = new frmPLN();
+            //frm.TopLevel = false;
+            //mainForm.pnlForm.Controls.Clear();
+            //mainForm.pnlForm.Controls.Add(frm);
+            //frm.BringToFront();
+            //frm.Show();
         }
 
         private void btnTagihan_Click(object sender, EventArgs e)
         {
-            frmPLN frm = new frmPLN();
-            frm.TopLevel = false;
-            frm.pnlNominal.Visible = false;
-            mainForm.pnlForm.Controls.Clear();
-            mainForm.pnlForm.Controls.Add(frm);
-            frm.BringToFront();
-            frm.Show();
+            //frmPLN frm = new frmPLN();
+            //frm.TopLevel = false;
+            //frm.pnlNominal.Visible = false;
+            //mainForm.pnlForm.Controls.Clear();
+            //mainForm.pnlForm.Controls.Add(frm);
+            //frm.BringToFront();
+            //frm.Show();
         }
 
         private void btnPascaBayar_Click(object sender, EventArgs e)

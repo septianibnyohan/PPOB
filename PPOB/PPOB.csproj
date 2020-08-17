@@ -52,6 +52,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +67,7 @@
     <Compile Include="Class\Model\Product.cs" />
     <Compile Include="Class\Model\ProductInfo.cs" />
     <Compile Include="Class\Model\Topup.cs" />
+    <Compile Include="Class\Response\AllResponse.cs" />
     <Compile Include="Class\Response\Basic.cs" />
     <Compile Include="Class\Response\LoginResponse.cs" />
     <Compile Include="Class\Response\ProductInfoResponse.cs" />
@@ -75,7 +77,28 @@
     <Compile Include="Component\RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Config.cs" />
+    <Compile Include="frmPLNPascaNominal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPLNPascaNominal.Designer.cs">
+      <DependentUpon>frmPLNPascaNominal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPLNPraKeterangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPLNPraKeterangan.Designer.cs">
+      <DependentUpon>frmPLNPraKeterangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPLNPraNominal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPLNPraNominal.Designer.cs">
+      <DependentUpon>frmPLNPraNominal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\ApiHelper.cs" />
+    <Compile Include="Helper\Converter.cs" />
+    <Compile Include="Helper\JSONHelper.cs" />
     <Compile Include="Helper\RestHelper.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -129,6 +152,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ApiRepo.cs" />
     <Compile Include="Repository\OperatorRepo.cs" />
+    <EmbeddedResource Include="frmPLNPascaNominal.resx">
+      <DependentUpon>frmPLNPascaNominal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPLNPraKeterangan.resx">
+      <DependentUpon>frmPLNPraKeterangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPLNPraNominal.resx">
+      <DependentUpon>frmPLNPraNominal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

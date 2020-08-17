@@ -46,3 +46,6 @@ C:\ProjectDev\PPOB\PPOB\bin\Debug\RestSharp.xml
 C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.MainForm.resources
 C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmSecurity.resources
 C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.csproj.CopyComplete
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmPLNPascaNominal.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmPLNPraNominal.resources
+C:\ProjectDev\PPOB\PPOB\obj\Debug\PPOB.frmPLNPraKeterangan.resources

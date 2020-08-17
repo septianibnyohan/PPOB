@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace PPOB.Component
 {
-    class RoundedButton : Button
+    public class RoundedButton : Button
     {
         GraphicsPath GetRoundPath(RectangleF Rect, int radius)
         {

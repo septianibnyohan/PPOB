@@ -123,7 +123,7 @@ namespace PPOB
 
             var product_info = ApiHelper.GetProductInfo(current_product_code);
             txtKeterangan.Text = product_info.Product;
-            var product_price = string.Format("{0:#,##0.00}", product_info.Price).Split(',');
+            var product_price = string.Format("{0:#,##0.00}", product_info.Price + 110).Split(',');
             lblHarga.Text = "Rp " + product_price[0];
             
             //lblHarga.Text = btn_text[btn_text.Count() - 1];

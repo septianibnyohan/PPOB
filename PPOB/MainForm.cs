@@ -39,11 +39,11 @@ namespace PPOB
 
         private void btnPLN_Click(object sender, EventArgs e)
         {
-            frmPLN frm = new frmPLN();
-            frm.TopLevel = false;
-            pnlForm.Controls.Add(frm);
-            frm.BringToFront();
-            frm.Show();
+            //frmPLN frm = new frmPLN();
+            //frm.TopLevel = false;
+            //pnlForm.Controls.Add(frm);
+            //frm.BringToFront();
+            //frm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

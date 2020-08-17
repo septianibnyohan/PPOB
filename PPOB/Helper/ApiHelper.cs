@@ -99,5 +99,76 @@ namespace PPOB.Helper
                 return res_data;
             }
         }
+
+        public static dynamic Inquiry(dynamic obj_data)
+        {
+            var url = ApiRepo.INQUIRY;
+            Login(Session.UserName, Session.Password);
+
+            var data = JSONHelper.ToJSON(obj_data);
+            var content = Post(url, data, Session.Token);
+
+            var res = JsonConvert.DeserializeObject<dynamic>(content);
+
+
+            if (res.status == "success")
+            {
+                var res_data = res.data;
+                return res_data;
+            }
+            else
+            {
+                return res;
+            }
+        }
+
+        public static AllResponse PayDetail(string idpel, int nominal)
+        {
+            var url = ApiRepo.PAY_DETAIL;
+            Login(Session.UserName, Session.Password);
+
+            dynamic obj_data = new
+            {
+                idpel = idpel,
+                nominal = nominal
+            };
+
+            var data = JSONHelper.ToJSON(obj_data);
+            var content = Post(url, data, Session.Token);
+
+            var res = JsonConvert.DeserializeObject<AllResponse>(content);
+
+            return res;
+        }
+
+        public static dynamic Buy(string idpel, string nominal, string product_code)
+        {
+            var url = ApiRepo.BUY;
+            Login(Session.UserName, Session.Password);
+
+            dynamic obj_data = new
+            {
+                idpel = idpel,
+                nominal = nominal,
+                product_code = product_code
+            };
+
+            var data = JSONHelper.ToJSON(obj_data);
+            var content = Post(url, data, Session.Token);
+
+            var res = JsonConvert.DeserializeObject<dynamic>(content);
+
+
+            if (res.sukses == "success")
+            {
+                var res_data = res.data;
+                return res_data;
+            }
+            else
+            {
+                var res_data = res.data;
+                return res_data;
+            }
+        }
     }
 }
